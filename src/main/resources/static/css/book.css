@@ -1,0 +1,60 @@
+body {
+    background-image: url("../img/2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0px;
+}
+
+.upper{
+    height: 10vh;
+    background-color:royalblue;
+    font-size: large;
+    font-weight: bolder;
+    color: white;
+    line-height: 10vh;
+}
+
+.bigbox{
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.label{
+    height: 35vh;
+    width: 28vw;
+    background-color: white;
+    opacity: 0.9;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    padding: 10px;
+}
+
+.bot{
+    background-color: cornflowerblue;
+    border-radius: 5px;
+    color: white;
+    height: 6vh;
+    width: 15vw;
+    font-weight: bolder;
+    font-size: large;
+}
+
+.buttonbox{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.info{
+    margin-top:10px;
+    line-height: 40px;
+    font-weight: bold;
+    font-size: medium;
+    margin-left: 20px;
+}

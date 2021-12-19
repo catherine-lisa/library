@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./css/book.css">
+    <title>图书</title>
+</head>
+
+<body>
+    <div class="upper">
+        <div style="margin-left:20px;">已登记图书</div>
+    </div>
+    <div class="bigbox">
+        <div class="label" id="label">
+            <img src="./img/book1.png">
+            <div class="info">
+                <div>图书名称: 编译原理与技术</div>
+                <div>作者:     李文生</div>
+                <div>出版社:   清华大学出版社</div>
+                <div>出版日:   2016.10</div>
+                <div>库存数量:  100</div>
+            </div>
+        </div>
+        <div class="label" >
+            <img src="./img/book2.jpg">
+            <div class="info">
+                <div>图书名称: 计算机算法设计与分析</div>
+                <div>作者:     王晓东</div>
+                <div>出版社:   中国工信出版集团</div>
+                <div>出版日:   2019.4</div>
+                <div>库存数量:  200</div>
+            </div>
+        </div>
+        <div class="label">
+            <img src="./img/book3.jpg">
+            <div class="info">
+                <div>图书名称: 通信原理</div>
+                <div>作者:     樊昌信 曹丽娜</div>
+                <div>出版社:   国防工业出版社</div>
+                <div>出版日:   2012.11</div>
+                <div>库存数量:  200</div>
+            </div>
+        </div>
+        <div class="label">
+            <img src="./img/book4.jpg" style="width: 14vw;">
+            <div class="info">
+                <div>图书名称: 操作系统</div>
+                <div>作者:     亚伯拉罕·西尔伯沙茨</div>
+                <div>出版社:   机械工业出版社</div>
+                <div>出版日:   2018.7</div>
+                <div>库存数量:  150</div>
+            </div>
+        </div>
+        <div class="label" >
+            <img src="./img/book5.png" style="width: 14vw;">
+            <div class="info">
+                <div>图书名称: python程序设计基础</div>
+                <div>作者:     董付国</div>
+                <div>出版社:   清华大学出版社</div>
+                <div>出版日:   2019.11</div>
+                <div>库存数量:  150</div>
+            </div>
+        </div>
+
+        <div class="label" th:each="lib:${books}">
+            <img src="./img/book5.png" style="width: 14vw;">
+            <!--img th:src="@{http://127.0.0.1:8080 + ${lib.fileName}}" style="width: 14vw;"-->
+            <div class="info">
+                <div th:text="${lib.bookname}">图书名称: python程序设计基础</div>
+                <div>作者：</div>
+                <!--/*@thymesVar id="author" type=""*/-->
+                <div th:text="${lib.author}"></div>
+                <div th:text="${lib.publisher}"></div>
+                <div th:text="${lib.publishDate}"></div>
+                <div th:text="${lib.leftNumber}"></div>
+            </div>
+        </div>
+    </div>
+    <div class="buttonbox">
+        <a class="btn btn-primary float-right" href="/add">Add</a>
+    </div>
+
+    <script type="text/javascript" src="./js/book.js"></script>
+
+</body>
+
+</html>

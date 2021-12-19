@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./css/add.css">
+    <title>新增图书</title>
+</head>
+
+<body>
+    <form method="post" action="/add" th:action = "@{/add}"  enctype="multipart/form-data">
+    <div class="box" id="bigbox">
+        <h1 style="margin-top: 20px;">新增图书信息</h1>
+        <div style="margin-left: 50px;">图书名称:
+            <input name="bookname" style="margin-left: 24px;" type="text" placeholder="请输入图书名">
+        </div>
+        <div style="margin-left: 50px;">作者:
+            <input name="author" style="margin-left: 55px;" type="text" placeholder="请输入作者">
+        </div>
+        <div style="margin-left: 50px;">出版社:
+            <input name="publisher" style="margin-left: 40px;" type="text" placeholder="请输入出版社">
+        </div>
+        <div style="margin-left: 50px;">出版年份:
+            <input name="publishDate" style="margin-left: 30px;" type="text" placeholder="请输入出版日期">
+        </div>
+        <div style="margin-left: 50px;">库存数量:
+            <input name="num" style="margin-left: 28px;" type="text" placeholder="请输入库存数量">
+        </div>
+        <div style="margin-left: 150px; display: flex; justify-content: space-between;">上传图书照片:
+            <!--<form method="post" enctype="multipart/form-data" id="file_upload">-->
+            <!--<input class="post" type="file" id="test-image-file"
+                 name="bookPic" accept="image/gif, image/jpeg, image/png, image/jpg"-->
+            <input type="file" name="bookPic" id="image_file" accept="image/*"/>
+        </div>
+
+        <button onclick="submit()" class="bot">确认新增</button>
+        <script type="text/javascript" src="./js/add.js"></script>
+
+    </div>
+    </form>
+</body>
+
+</html>

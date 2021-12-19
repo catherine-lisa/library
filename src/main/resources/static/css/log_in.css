@@ -1,0 +1,46 @@
+body {
+    margin: 20px;
+    background-image: url("../img/background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.box{
+    margin-top: 200px;
+    border-radius: 10px;
+    margin-left: 520px;
+    width: 35vw;
+    height: 40vh;
+    background-color: white;
+    text-align: center;
+    line-height: 40px;
+    padding: 10px;
+    opacity:0.93;
+}
+
+.bot{
+    margin-top: 15px;
+    width: 10vw;
+    height: 5vh;
+    background-color: aquamarine;
+    color:honeydew;
+    border-radius: 5px;
+    border-color: powderblue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:large;
+    opacity:1;
+}
+
+@keyframes myAnimation {
+    from {
+        transform: rotateY(0);
+        margin-top: 200px;
+    }
+
+    to {
+        opacity: 0;
+        margin-top: -300px;
+    }
+}

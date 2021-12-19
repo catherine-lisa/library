@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./css/log_in.css">
+    <title>登录</title>
+</head>
+<body>
+<!--form method="post" action="/add" th:action = "@{/add}"  enctype="multipart/form-data"-->
+<div class="box" id="bigbox">
+        <h1 style="margin-top: 40px;">图书馆管理员登陆</h1>
+        <div style="margin-left: 50px;">用户名：
+            <input id="user" name = "user" style="margin-left: 24px;" type="text" placeholder="请输入用户名">
+        </div>
+        <div style="margin-left: 50px;">密码：
+            <input id="password" name="password" style="margin-left: 40px;" type="password" placeholder="请输入密码">
+        </div>
+        <button onclick="submit()" class="bot">登录</button>
+        <script type="text/javascript" src="./js/log_in.js"></script>
+    </div>
+</body>
+</html>
